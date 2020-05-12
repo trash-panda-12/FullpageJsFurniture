@@ -17,16 +17,16 @@ function styles() {
 
 
 function dist(done) {
-    gulp.src('./src/index.html')
+    gulp.src('index.html')
     .pipe(gulp.dest('./dist'));
 
-    gulp.src('./src/main.css')
+    gulp.src('main.css')
     .pipe(gulp.dest('./dist'));
 
-    gulp.src('./src/js/*')
+    gulp.src('./js/**/*.js')
         .pipe(gulp.dest('./dist/js'));
 
-    gulp.src('./src/images/*')
+    gulp.src('/images/*')
     .pipe(gulp.dest('./dist/images'));
 
 
@@ -52,11 +52,11 @@ function reload(done) {
 
 function watchFiles(done) {
     
-    gulp.watch('./src/*.html', reload);
+    gulp.watch('./*.html', reload);
 
-    gulp.watch('./src/scss/*.scss', gulp.series(styles,reload));
+    gulp.watch('./scss/*.scss', gulp.series(styles,reload));
 
-    gulp.watch('./src/js/*.js', reload)
+    gulp.watch('./js/*.js', reload)
     
 };
 
