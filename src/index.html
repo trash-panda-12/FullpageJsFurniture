@@ -9,12 +9,70 @@
     
 </head>
 <body>
-    
+    <!-- First Section -->
     <div id="fullpage">
-        <div class="section">Some section</div>
-        <div class="section">Some section</div>
-        <div class="section">Some section</div>
-        <div class="section">Some section</div>
+        <div class="section" id="section0">
+            <h1>Home Decoration </h1>
+        </div>
+
+        <!-- Second Section -->
+        <div class="section" id="section1">
+            <h2>Different Styles</h2>
+
+            <div class="container">
+                <div class="content">
+                    <div class="textContent">
+                        <p>
+                            Lorem ipsum dolor sit amet consectetur adipisicing elit. Possimus facere at sit quas odio 
+                        </p>
+                        <br/>
+                        <p>
+                            Lorem ipsum dolor sit, amet consectetur adipisicing elit. Tenetur, explicabo. Minima, obcaecati ad. Libero, ratione voluptates ullam 
+                        </p>
+                    </div>
+
+                    <div class="images">
+                        <img src="images/chair1.png" alt="">
+                    </div>
+
+                    
+                </div>
+ 
+            </div>
+        </div>
+
+        <!-- Third Section -->
+        <div class="section" id="section2">
+                <h2> Contact us for any Inquiries:</h2>
+            <div class="container">
+                <div class="formBox">
+                    <form action="">
+                        <div class="inputBox">
+                            <input type="text" name="FName" placeholder = "First Name">
+                        </div>
+
+                        <div class="inputBox">
+                            <input type="text" name="LName" placeholder="Last Name">
+                        </div>
+
+                        <div class="inputBox">
+                            <input type="email" name = "email" placeholder="Email Address">
+                        </div>
+                        
+                        <div class="inputBox">
+                            <textarea placeholder="How can we help?" name="Inquiry" cols="30" rows="3"></textarea>
+                        </div>
+
+                        <div class="inputBox">
+                            <button type="Submit">
+                                Submit
+                            </button>
+                        </div>
+                    </form>
+                </div>
+            </div>
+        </div>
+        
     </div>
 
 
@@ -43,6 +101,8 @@
     <script type="text/javascript">
         var myFullpage = new fullpage('#fullpage', {
             verticalCentered: false,
+            navigation:true,
+            navigationPosition: 'right',
 
             //to avoid problems with css3 transforms and fixed elements in Chrome, as detailed here: https://github.com/alvarotrigo/fullPage.js/issues/208
             css3: false
